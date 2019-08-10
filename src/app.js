@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
+const geocode = require('./utils/geocode')
 
 const app = express()
 
@@ -16,6 +17,39 @@ hbs.registerPartials('partialsPath')
 
 app.get('/',(req,res) => {
     res.render('index')
+})
+
+app.get('/weather',(req,res) => {
+    if(!req.query.address) {
+        return res.send({
+            error: 'You must provide a address'
+        })
+    }
+
+    geocode(req.query.address, (err,{latitude, longitude, location} = {}) => {
+        if(err) {
+            return res.send({
+                error: err
+            })
+        }
+        res.send({
+            longitude,
+            latitude
+        })
+        // forecast(latitude,longitude, (err,forecastData) => {
+        //     if(err) {
+        //         return res.send({
+        //             error: err
+        //         })
+        //     }
+
+        //     res.send({
+        //         address: req.query.address,
+        //         forecast: forecastData,
+        //         location
+        //     })
+        // })
+    })
 })
 
 app.listen(3000,(req,res) => {

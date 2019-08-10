@@ -7,7 +7,6 @@
     "watch:sass": "node-sass sass/main.scss public/css/style.css -w",
     "devserver": "nodemon src/app.js -e js,hbs",
     "dev": "npm-run-all --parallel devserver watch:sass",
-    "dev2": "npm-run-all watch:sass devserver",
     "start": "node src/app.js",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
