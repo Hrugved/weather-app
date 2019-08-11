@@ -7,17 +7,36 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />    
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />   
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 
     <title>Weather-app-Remake</title>
 </head>
 <body>
-    <form action="">
-        <input placeholder="search">
-        <button>Search</button>
-    </form>
+    <main class="main">
+        <div class="sidebar">
 
-    <div id="map"></div>
+            <section class="content">
+                <form class="search" action="">
+                    <input class="search__input" placeholder="search">
+                    <button class="search__btn"><i class="fas fa-search-location"></i></button>
+                </form>
+
+                <p class="summary"></p>
+            </section>
+
+            <footer class="footer">
+                &copy; Created By <span class="footer__name">Hrugved</span>
+            </footer>
+
+        </div>
+
+
+
+        <div id="map"></div>
+    </main>
+    
     <script src="js/app.js"></script>
 </body>
 </html>

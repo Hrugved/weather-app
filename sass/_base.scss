@@ -1,3 +1,8 @@
+$color-black : #000;
+$color-primary-light : #B8B8B8;
+$color-primary : #333333;
+$color-primary-dark : #1B1B1B;
+
 * {
     margin: 0;
     padding: 0;
@@ -14,20 +19,72 @@ html {
 }
 
 body {
-    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Lexend Exa', sans-serif;
+    font-weight: 400;
+    color: $color-primary-light;
+    min-height: 100vh;
 }
 
-.header{
-    height: 25vh;
-    width: 25%;
-    background-color: black;
+.main {
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    flex: 0 1 20%;
+    background-color: $color-black;
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search{
+    font-size: 1.5rem;
+
+    & > * {
+        // height: 2.5rem;
+    }
+
+    &__input {   
+        background-color: $color-black;
+        border: none;
+        border-radius: 100px;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        width: 80%;
+        padding: 1rem 2rem;
+        margin-right: -3rem;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: $color-primary;
+            color: $color-primary-light;
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.footer {
+    font-size: 1rem;
+    height: 2rem;
+    
+    &__name{
+        display: block;
+        font-size: 2.5rem;
+    }
 }
 
 #map {
-    position: absolute;
-    top: 0;
-    left: 150px;
-    height: 100vh;
-    width: 100vw;
-    // z-index: -1;
+    // height: 100vh;
+    flex: 1;
 }
+

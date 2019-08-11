@@ -7,8 +7,8 @@ const map = new mapboxgl.Map({
     zoom: 5
 })
 
-const weatherForm = document.querySelector('form')
-const search = document.querySelector('input')
+const weatherForm = document.querySelector('.search')
+const search = document.querySelector('.search__input')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()

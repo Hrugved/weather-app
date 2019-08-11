@@ -11,16 +11,52 @@ html {
   font-size: 62.5%; }
 
 body {
-  height: 100vh; }
+  box-sizing: border-box;
+  font-family: 'Lexend Exa', sans-serif;
+  font-weight: 400;
+  color: #B8B8B8;
+  min-height: 100vh; }
 
-.header {
-  height: 25vh;
-  width: 25%;
-  background-color: black; }
+.main {
+  height: 100vh;
+  display: flex; }
+
+.sidebar {
+  flex: 0 1 20%;
+  background-color: #000;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.search {
+  font-size: 1.5rem; }
+  .search__input {
+    background-color: #000;
+    border: none;
+    border-radius: 100px;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    width: 80%;
+    padding: 1rem 2rem;
+    margin-right: -3rem;
+    transition: all .2s; }
+    .search__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: #333333;
+      color: #B8B8B8; }
+  .search__btn {
+    background-color: transparent;
+    border: none; }
+
+.footer {
+  font-size: 1rem;
+  height: 2rem; }
+  .footer__name {
+    display: block;
+    font-size: 2.5rem; }
 
 #map {
-  position: absolute;
-  top: 0;
-  left: 150px;
-  height: 100vh;
-  width: 100vw; }
+  flex: 1; }
