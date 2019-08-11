@@ -22,7 +22,7 @@ body {
   display: flex; }
 
 .sidebar {
-  flex: 0 1 20%;
+  flex: 0 1 30%;
   background-color: #000;
   padding: 5rem 3rem;
   display: flex;
@@ -57,6 +57,20 @@ body {
   .footer__name {
     display: block;
     font-size: 2.5rem; }
+
+.forecast {
+  height: 10rem;
+  width: 80%; }
+  .forecast__summary {
+    font-size: 4rem; }
+  .forecast__temp-curr {
+    font-size: 3rem; }
+  .forecast__temp-high {
+    font-size: 2rem; }
+  .forecast__temp-low {
+    font-size: 2rem; }
+  .forecast__rain-prob {
+    font-size: 1.5rem; }
 
 #map {
   flex: 1; }
