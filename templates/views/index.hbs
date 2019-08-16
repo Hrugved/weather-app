@@ -15,34 +15,60 @@
 </head>
 <body>
     <main class="main">
-        <div class="sidebar">
 
-            <section class="content">
-                <form class="search" action="">
-                    <input class="search__input" placeholder="search">
-                    <button class="search__btn"><i class="fas fa-search-location"></i></button>
-                </form>
+        {{!-- LEFT_DISPLAY --}}
 
+        <section class="display-left">
+            <div class="sidebar">
+
+                <div class="content">
+                    
+                    
+                        {{!-- <div class="form__radio">
+                            <input type="radio" class="form__radio-input" id="cel" name="units">
+                            <label for="cel" class="form__radio-label">
+                                Celsius
+                            </label>
+                            <input type="radio" class="form__radio-input" id="fah" name="units">
+                            <label for="fah" class="form__radio-label">
+                                Farhenheit
+                            </label>
+                        </div> --}}
+                        
+
+                    <div class="forecast">
+                        <p class="forecast__summary"></p>
+                        <div class="forecast__temp-curr">
+                            <p class="forecast__temp-curr__text"></p>
+                            <p class="forecast__temp-curr__value"></p>
+                        </div>
+                        
+                        <p class="forecast__temp-high"></p>
+                        <p class="forecast__temp-low"></p>
+                        <p class="forecast__rain-prob"></p>
+                    </div>
                 
-
-                <div class="forecast">
-                    <p class="forecast__summary"></p>
-                    <p class="forecast__temp-curr"></p>
-                    <p class="forecast__temp-high"></p>
-                    <p class="forecast__temp-low"></p>
-                    <p class="forecast__rain-prob"></p>
                 </div>
-            </section>
 
-            <footer class="footer">
-                &copy; Created By <span class="footer__name">Hrugved</span>
-            </footer>
+                <footer class="footer">
+                    &copy; Created By <span class="footer__name">Hrugved</span>
+                </footer>
+            
+            </div>
 
-        </div>
+        </section>
 
 
+        {{!-- RIGHT_DISPLAY --}}
 
-        <div id="map"></div>
+        <section class="display-right">
+            <form class="form" action="">
+                <input class="form__input" placeholder="Place Name" required>
+                <button class="form__btn"><i class="fas fa-form-location"></i></button>
+            </form>
+            <div class="map" id="map"></div>    
+        </section> 
+        
     </main>
     
     <script src="js/app.js"></script>
