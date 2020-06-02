@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Weather app remake",
   "main": "app.js",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "watch:sass": "node-sass sass/main.scss public/css/style.css -w",
     "devserver": "nodemon src/app.js -e js,hbs",
